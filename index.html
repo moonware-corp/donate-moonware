@@ -247,6 +247,10 @@
                 style="border: #38C68B 5px solid; width: 100%; background-color: rgba(0, 0, 0, 0.7); backdrop-filter: blur(5px); border-radius: 10px; color: #38C68B; padding: 10px; margin-top: 20px;">
                 <h2>1. Donating</h2>
 
+                <p id="warning" style="color: red;"> <strong>Warning: I can only be notificated if you donate
+                        throught Momo </strong>
+                </p>
+
                 <div class="qr_donate_zone">
                     <div style="padding-right: 2px;">
                         <img style="width: 100%; height: 100%;" src="sacombank.png" alt="">
@@ -359,9 +363,11 @@
         var button_click_audio = document.getElementById("button_click");
 
         var lang_button = document.getElementById("lang_button");
+        var warning = document.getElementById("warning");
         var welcum = document.getElementById("welcum");
         var reason_donate = document.getElementById("reason_donate");
         var social_media = document.getElementById("social_media");
+
 
         function english_button_hovered() {
             button_hover_audio.play();
@@ -381,6 +387,9 @@
                                         <button onmouseover="vnese_button_hovered()" onclick="vnese_button_clicked()" class="button">Tiếng
                                             Việt</button>
                                     </div>`;
+
+            warning.innerHTML = `<strong>Warning: I can only be notificated if you donate throught Momo</strong>`;
+
 
             welcum.innerHTML = `<h2>welcome to my support page</h2>
                 <p style="margin: 0; color: white;">How can you support me on creating contents and games?</p>`;
@@ -442,6 +451,8 @@
                                         <div style="padding-left: 2px;">
                                             <button style="background-color: #38C68B; color: #292929;" class="button">Tiếng Việt</button>
                                         </div>`;
+
+            warning.innerHTML = `<strong>Chú ý: Tôi chỉ có thể nhận thông báo khi ní donate qua Momo</strong>`;
 
             welcum.innerHTML = `<h2>Chào mừng mấy ní đến với trang "từ thiện cho tôi"</h2>
                 <p style="margin: 0; color: white;">Mấy ní có thể ủng hộ tôi bằng những cách nào?</p>`;
